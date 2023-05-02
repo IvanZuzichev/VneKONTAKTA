@@ -1,0 +1,31 @@
+﻿<Window x:Class="VneKONTAKTA_Relis.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VneKONTAKTA_Relis"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Добро пожаловать в Vnekontakta" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" FontSize="14"/>
+        <TextBox x:Name="serverTxt" Grid.Column="1" Grid.Row="1"/>
+        <Button x:Name="ToServer" Content="Я создаю новый серсер" Grid.Row="2" Grid.Column="1" Click="ToServer_Click" Background="LightBlue" />
+
+        <TextBox x:Name="clientTxt" Grid.Column="1" Grid.Row="3"/>
+        <Button x:Name="ToClient" Content="Я присоединяюсь к серверу" Grid.Row="4" Grid.Column="1" Background="LightGreen" Click="ToClient_Click"/>
+        <Frame x:Name="perexod" Grid.RowSpan="6" Grid.ColumnSpan="6" NavigationUIVisibility="Hidden"  />
+    </Grid>
+</Window>
